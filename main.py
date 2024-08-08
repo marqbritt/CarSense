@@ -14,7 +14,7 @@ index_to_label = {i: label for i, label in enumerate(entity_labels)}
 
 # Load the pre-trained model with correct vocabulary size and embedding dimension
 try:
-    model_path = '/Users/marq/Documents/useNER/useNER_model.pth'
+    model_path = 'model.pth'
     model = CarNERModel(num_tags=len(entity_labels), hidden_dim=768, vocab_size=tokenizer.vocab_size, embedding_dim=300)
     model.load_state_dict(torch.load(model_path, map_location=device))
     model.to(device)
@@ -27,7 +27,7 @@ except Exception as e:
     exit()
 
 # Correct the path to the cars dataset
-cars_df_path = ('/Users/marq/Desktop/car_data.csv')
+cars_df_path = ('path')
 try:
     cars_df = pd.read_csv(cars_df_path)
 except FileNotFoundError:
