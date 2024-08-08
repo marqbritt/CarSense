@@ -121,8 +121,8 @@ if __name__ == "__main__":
     print(f"Using device: {device}")
 
     # Load datasets
-    questions_df = pd.read_csv('/Users/marq/Desktop/100_vehicle_questions.csv')
-    cars_df = pd.read_csv('/Users/marq/Desktop/car_data.csv').fillna('')
+    questions_df = pd.read_csv('path')
+    cars_df = pd.read_csv('path').fillna('')
 
     # Prepare data loaders
     questions_dataset = CustomDataset(questions_df['Pattern'], tokenizer)
